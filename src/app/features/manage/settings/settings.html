@@ -1,0 +1,59 @@
+<!-- Start Content -->
+<div class="content">
+
+    <!-- Page Header -->
+    <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+        <div class="breadcrumb-arrow">
+            <h4 class="mb-1">Settings</h4>
+            <div class="text-end">
+                <ol class="breadcrumb m-0 py-0">
+                    <li class="breadcrumb-item"><a [routerLink]="AllRoutes.index">Home</a></li>    
+                    <li class="breadcrumb-item"><a [routerLink]="AllRoutes.generalSettings">Settings</a></li>                          
+                    <li class="breadcrumb-item active">Permissions</li>
+                </ol>
+            </div>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <!-- Start Tabs -->
+    <ul class="nav nav-tabs nav-item-primary mb-3 border-bottom pb-4 mb-4 d-flex align-items-center gap-2">
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.generalSettings" routerLinkActive="active" class="nav-link border rounded fw-semibold">
+                General
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.securitySettings" routerLinkActive="active" class="nav-link border rounded fw-semibold">
+                Security
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.preferencesSettings" routerLinkActive="active" class="nav-link border rounded fw-semibold">
+                Preferences
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.appearanceSettings" routerLinkActive="active" class="nav-link border rounded fw-semibold">
+               Appearance
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.notificationsSettings" routerLinkActive="active" class="nav-link border rounded fw-semibold">
+                Notifications
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.userPermissionsSettings" routerLinkActive="active" class="nav-link border rounded fw-semibold">
+                User Permissions
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.plansBillingsSettings" routerLinkActive="active" class="nav-link border rounded fw-semibold">
+                Plans & Billing
+            </a>
+        </li>
+    </ul>
+    <!-- End Tabs -->
+<router-outlet></router-outlet>
+</div>

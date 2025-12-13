@@ -1,0 +1,565 @@
+<!-- Start Content -->
+<div class="content">
+
+    <!-- Page Header -->
+    <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+        <div class="breadcrumb-arrow">
+            <h4 class="mb-1">Patient Details</h4>
+            <div class="text-end">
+                <ol class="breadcrumb m-0 py-0">
+                    <li class="breadcrumb-item"><a [routerLink]="AllRoutes.index">Home</a></li>                            
+                    <li class="breadcrumb-item active">Patient Details</li>
+                </ol>
+            </div>
+        </div>
+        <a [routerLink]="AllRoutes.patients" class="fw-medium d-flex align-items-center"><i class="ti ti-arrow-left me-1"></i>Back to Patients</a>
+    </div>
+    <!-- End Page Header -->
+
+    <!-- tabs start -->
+     <ul class="nav nav-tabs nav-item-primary mb-3 border-bottom pb-4 mb-4 d-flex align-items-center gap-2">
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientDetails" class="nav-link border rounded fw-semibold active">
+                Profile
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientDetailsAppointment" class="nav-link border rounded fw-semibold">
+                Appointments
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientDetailsVitalSign" class="nav-link border rounded fw-semibold">
+                Vitals
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsVisitHistory" class="nav-link border rounded fw-semibold">
+               Visit History
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsLabResults" class="nav-link border rounded fw-semibold">
+                Lab Results
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientdetailsPrescription" class="nav-link border rounded fw-semibold">
+                Prescription
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsMedicalHistory" class="nav-link border rounded fw-semibold">
+                Medical History
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsDocuments" class="nav-link border rounded fw-semibold">
+                Documents
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsInsurance" class="nav-link border rounded fw-semibold">
+                Insurance
+            </a>
+        </li>
+    </ul>
+    <!-- tabs end -->
+
+    <!-- row start -->
+    <div class="row">
+        
+        <!-- col start -->
+        <div class="col-xl-4">
+            <div class="card mb-4 mb-xl-0">
+                <div class="card-body">
+                    <div class="d-flex align-items-center pb-3 mb-3 border-bottom">
+                        <div class="avatar avatar-xxl me-3">
+                            <img src="assets/img/avatars/avatar-03.jpg" alt="patient" class="rounded">
+                        </div>
+                        <div>
+                            <span class="badge badge-soft-primary">#PT001</span>
+                            <h5 class="mb-1 mt-2">Reyan Verol</h5>
+                            <p class="fs-13 mb-0">Last Visited : 24 Jan 2025</p>
+                        </div>
+                    </div>
+                    <h6 class="mb-2">Basic Information</h6>
+                    <p class="mb-3">Added On <span class="float-end text-dark">24 May 2024</span></p>
+                    <p class="mb-3">DOB <span class="float-end text-dark">10 Jan 1991</span></p>
+                    <p class="mb-3">Gender <span class="float-end text-dark">Male</span></p>
+                    <p class="mb-3">Martial Status <span class="float-end text-dark">Married</span></p>
+                    <p class="mb-3">Blood Group <span class="float-end text-dark">O+ve</span></p>
+                    <p class="mb-3">Phone Number <span class="float-end text-dark">+1 75964 25493</span></p>
+                    <p class="mb-3">Email <span class="float-end text-dark">cynthiya@example.com</span></p>
+                    <p class="mb-3">Referred By <a [routerLink]="AllRoutes.doctorDetails" class="float-end text-decoration-underline link-primary">Dr Antonio</a></p>
+                    <p class="mb-3">Total No of Bookings <span class="float-end text-dark">+12</span></p>
+                    <h6 class="mb-2 mt-3 mb-2 pt-3 border-top">Address Information</h6>
+                    <p class="mb-0">2557 Tanglewood Road, Jackson, MS 39213</p>
+                </div>
+            </div>
+        </div>
+        <!-- col end -->
+
+        <!-- col start -->
+        <div class="col-xl-8">
+
+            <!-- card start -->
+             <div class="card shadow flex-fill w-100">
+                <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <h5 class="mb-0 d-inline-flex align-items-center">Appointments</h5> 
+                    <a [routerLink]="AllRoutes.appointments" class="btn btn-sm btn-white flex-shrink-0">View All</a>
+                </div>
+                <div class="card-body">
+                    <div class="row row-gap-3">
+                        <div class="col-xl-6 d-flex">
+                            <div class="p-3 border rounded flex-fill">
+                                <div class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3">
+                                    <span class="badge badge-soft-purple">Upcoming</span>
+                                    <a href="javascript:void(0);" class="btn btn-icon btn-secondary" aria-label="video"><i class="ti ti-video"></i></a>
+                                </div>
+                                <div class="row row-gap-3">
+                                    <div class="col-sm-6">
+                                        <h6 class="fs-14 fw-semibold mb-1">Department</h6>
+                                        <p class="fs-13 mb-0">Cardiology</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h6 class="fs-14 fw-semibold mb-1">Doctor</h6>
+                                        <p class="fs-13 mb-0 text-truncate">Dr. Andrew Clark</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h6 class="fs-14 fw-semibold mb-1">Date & Time</h6>
+                                        <p class="fs-13 mb-0">21 Dec 2024, 07:00 AM</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h6 class="fs-14 fw-semibold mb-1">Booked On</h6>
+                                        <p class="fs-13 mb-0">20 Dec 2024</p>
+                                    </div>
+                                </div>
+                            </div>                                        
+                        </div>
+                        <div class="col-xl-6 d-flex">
+                            <div class="p-3 border rounded flex-fill">
+                                <div class="d-flex align-items-center justify-content-between border-bottom mb-3 pb-3">
+                                    <span class="badge badge-soft-success">Completed</span>
+                                    <a href="javascript:void(0);" class="btn btn-icon btn-primary" aria-label="phone"><i class="ti ti-phone"></i></a>
+                                </div>
+                                <div class="row row-gap-3">
+                                    <div class="col-sm-6">
+                                        <h6 class="fs-14 fw-semibold mb-1">Department</h6>
+                                        <p class="fs-13 mb-0">Radiology</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h6 class="fs-14 fw-semibold mb-1">Doctor</h6>
+                                        <p class="fs-13 mb-0 text-truncate">Dr. Laura Mitchell</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h6 class="fs-14 fw-semibold mb-1">Date & Time</h6>
+                                        <p class="fs-13 mb-0">15 Jan 2025, 10:35 AM</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <h6 class="fs-14 fw-semibold mb-1">Booked On</h6>
+                                        <p class="fs-13 mb-0">13 Jan 2025</p>
+                                    </div>
+                                </div>
+                            </div>                                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card end -->
+
+            <!-- card start -->
+            <div class="card">
+                <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                   <h5 class="mb-0 d-inline-flex align-items-center">Vital Signs</h5>
+                   <a href="javascript:void(0);" class="link-danger text-decoration-underline">Past Data</a>
+                </div>
+                <div class="card-body pb-0">
+                    <div class="row">
+                       <div class="col-sm-4">
+                            <div class="d-flex align-items-center mb-3">
+                                <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i class="ti ti-droplet fs-16"></i></span>
+                                <div>
+                                    <h6 class="fs-14 fw-semibold mb-1 text-truncate">Blood Pressure</h6>
+                                    <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate">100/67 mmHg</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-flex align-items-center mb-3">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i class="ti ti-heart-rate-monitor fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1 text-truncate">Heart Rate</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate">89 Bpm</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-flex align-items-center mb-3">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i class="ti ti-hexagons fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1">SPO2</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate">98 %</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-flex align-items-center mb-3">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i class="ti ti-temperature fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1 text-truncate">Temperature</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate">101 C</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-flex align-items-center mb-3">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i class="ti ti-ease-in fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1 text-truncate">Respiratory Rate</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate">24 rpm</p>
+                            </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-4">
+                            <div class="d-flex align-items-center mb-3">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i class="ti ti-circuit-switch-open fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1 text-truncate">Weight</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate">100 kg</p>
+                            </div>
+                            </div>
+                       </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card end -->
+
+            <!-- card start -->
+            <div class="card mb-0">
+                <div class="card-header d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <h5 class="fw-bold mb-0 d-inline-flex align-items-center">Visit History</h5> 
+                    <a [routerLink]="AllRoutes.visits" class="btn btn-sm btn-outline-light flex-shrink-0">View All</a>
+                </div>
+                <div class="card-body pb-0">
+                    <div class="row row-gap-3">
+                        <div class="col-xl-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="avatar flex-shrink-0">
+                                            <img src="assets/img/doctors/doctor-12.jpg" class="rounded" alt="doctor">
+                                        </a>
+                                        <div class="ms-2">
+                                            <div>
+                                                <h6 class="fw-semibold fs-14 text-truncate mb-1"><a [routerLink]="AllRoutes.doctorDetails">Dr. Samuel Turner</a></h6>
+                                                <p class="fs-13 mb-0">Cardiology, MD, FRCS</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3 row-gap-2">
+                                        <div class="col-sm-7">
+                                            <h6 class="fw-semibold mb-1 fs-14">Visited On</h6>
+                                            <p class="fs-13 mb-0 text-truncate">21 Dec 2024, 07:00 AM</p>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <h6 class="fw-semibold mb-1 fs-14">Follow Up</h6>
+                                            <p class="fs-13 mb-0">After 15 Days</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 bg-light rounded">
+                                        <h6 class="fw-semibold mb-1 fs-14">Notes</h6>
+                                        <p class="fs-13 mb-0 text-truncate line-clamb-2">Detailed Information about the symptoms that brought the patient to the visit</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-6">
+                            <div class="card">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-center mb-3">
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="avatar flex-shrink-0">
+                                            <img src="assets/img/doctors/doctor-09.jpg" class="rounded" alt="doctor">
+                                        </a>
+                                        <div class="ms-2">
+                                            <div>
+                                                <h6 class="fw-semibold fs-14 text-truncate mb-1"><a [routerLink]="AllRoutes.doctorDetails">Dr. Natalie Foster</a></h6>
+                                                <p class="fs-13 mb-0">Neurology, MD, DNB</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row mb-3 row-gap-2">
+                                        <div class="col-sm-7">
+                                            <h6 class="fw-semibold mb-1 fs-14">Visited On</h6>
+                                            <p class="fs-13 mb-0 text-truncate">08 Jan 2024, 09:55 AM</p>
+                                        </div>
+                                        <div class="col-sm-5">
+                                            <h6 class="fw-semibold mb-1 fs-14">Follow Up</h6>
+                                            <p class="fs-13 mb-0">After 12 Days</p>
+                                        </div>
+                                    </div>
+                                    <div class="p-3 bg-light rounded">
+                                        <h6 class="fw-semibold mb-1 fs-14">Notes</h6>
+                                        <p class="fs-13 mb-0 text-truncate line-clamb-2">Information provided to the patient regarding their condition and symptoms</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- card end -->
+
+        </div>
+        <!-- col end -->
+
+    </div>
+    <!-- row end -->
+
+</div>
+<!-- End Content -->
+
+<!-- Start view Modal -->
+<div id="view_modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+                    <h6 class="mb-0 fw-medium">25 Jan  2023</h6>                        
+                    <div class="d-flex align-items-center gap-2 flex-wrap">
+                        <a href="javascript:void(0);" class="btn btn-outline-light"><i class="ti ti-file-download me-1"></i>Download PDF</a>
+                        <a href="javascript:void(0);" class="btn btn-outline-light"><i class="ti ti-message-2-share me-1"></i>Send Email</a>
+                        <a href="javascript:void(0);" class="btn btn-outline-light"><i class="ti ti-printer me-1"></i>Print</a>
+                    </div>
+                </div>
+                <div class="row mb-4 justify-content-center">
+                    <div class="col-lg-8 text-center">
+                        <div class="mb-4 text-center">
+                            <img src="assets/img/logo-dark.svg" alt="logo" class="invoice-logo">
+                            <img src="assets/img/logo.svg" class="invoice-logo-white mx-auto" alt="logo">
+                        </div>
+                        <h6 class="mb-3">Dreams Medical Center</h6>
+                        <p class="fw-medium fs-16 mb-2">(Affiliated to Dreams Hospitals & Research) 16, Wardlow, Buxton, Derbyshire, SK17 8RW. Phone : 01298 872268 </p>
+                        <p class="mb-0">Monday to Sunday - 09:30am  to 12:00pm</p>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="avatar avatar-xxl flex-shrink-0 bg-light rounded border">
+                            <img src="./assets/img/icons/icon-logo.svg" alt="img" class="w-auto h-auto">
+                        </span>
+                        <div>
+                            <h6 class="mb-1">Dream’s Medical Center</h6>
+                            <p class="mb-1 text-dark fw-medium">Dr. Sandy Maria</p>
+                            <p class="fs-13 mb-0">MD Aerologist. MBBS,MS</p>
+                        </div>
+                    </div>
+                    <div class="text-lg-end">
+                        <p class="mb-1"><span class="text-dark fw-medium">Test Type : </span>CBC</p>
+                        <p class="mb-1"><span class="text-dark fw-medium">Collected On: </span>25 Jan 2024, 10:00 AM</p>
+                        <p class="mb-0"><span class="text-dark fw-medium">Reported On: </span>25 Jan 2024, 11:00 AM</p>
+                    </div>
+                </div>
+                <h5 class="mb-1">Patient Details</h5>
+                <div class="mb-4 bg-light rounded p-2 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <h6 class="fs-14 fw-medium mb-0">M. Reyan Verol</h6>
+                    <div class="d-flex align-items-center gap-3 flex-wrap">
+                        <p class="mb-0 fs-12">28Y /  Male</p>
+                        <p class="mb-0 fs-12">Blood : O+ve</p>
+                        <p class="mb-0 fs-12">Patient / Consult ID : OP1245654 / C243546566 </p>
+                        <p class="mb-0 fs-12">Type : Outpatient</p>
+                    </div>
+                </div>
+                <h5 class="mb-3">Cardiology Prescription</h5>
+                <div class="table-responsive table-nowrap rounded border border-bottom-0">
+                    <table class="table mb-0 rounded">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="text-white">#</th>
+                                <th class="text-white">Medicine Name</th>
+                                <th class="text-white">Dosage</th>
+                                <th class="text-white">Frequency</th>
+                                <th class="text-white">Duration</th>
+                                <th class="text-white">Timings</th>
+                                <th class="text-white">Instruction</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>1</td>
+                                <td class="text-dark">Ecosprin 75MG</td>
+                                <td>75 mg</td>
+                                <td>1-0-0-0</td>
+                                <td>1 Month</td>
+                                <td>Before Meal</td>
+                                <td><p class="mb-0 text-truncate">Take one tablet once daily after food, or as directed by the physician.</p></td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="text-dark">Axer 90MG Tab</td>
+                                <td>90 mg</td>
+                                <td>1-0-0-1</td>
+                                <td>2 Months</td>
+                                <td>After Meal</td>
+                                <td><p class="mb-0 text-truncate">Take one tablet daily with water or as doctor prescribes.</p></td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="text-dark">Ramistar XL 2.5</td>
+                                <td>60 ml</td>
+                                <td>1-0-1-0</td>
+                                <td>3 Months</td>
+                                <td>Before Meal</td>
+                                <td><p class="mb-0 text-truncate">Take one tablet daily with water or as doctor prescribes.</p></td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="text-dark">METSCORE</td>
+                                <td>95 mg</td>
+                                <td>1-0-0-1</td>
+                                <td>4 Months</td>
+                                <td>After Meal</td>
+                                <td><p class="mb-0 text-truncate">Take one tablet daily with food or as doctor advises.</p></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="border-top mt-4 pt-4 d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                    <div>
+                        <p class="mb-2">Scan to the pay</p>
+                        <img src="./assets/img/icons/qr-code.svg" alt="qr-code">
+                    </div>
+                    <div class="text-center">
+                        <img src="./assets/img/icons/signature.svg" alt="signature" class="signature mb-2">
+                        <h6 class="fw-semibold fs-14 mb-1">Ted M. Davis</h6>
+                        <p class="mb-0">Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End view Modal -->    
+
+<!-- Start view Modal -->
+<div id="view_result" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h4 class="text-dark modal-title fw-bold text-truncate d-flex align-items-center">View Report</h4>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>      
+            </div>
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 mb-4">
+                    <img src="assets/img/logo-dark.svg" alt="logo" class="invoice-logo">
+                    <img src="assets/img/logo.svg" class="invoice-logo-white" alt="logo">
+                    <div class="d-flex align-items-center gap-2">
+                        <a href="javascript:void(0);" class="btn btn-outline-light"><i class="ti ti-file-download me-1"></i>Download PDF</a>
+                        <a href="javascript:void(0);" class="btn btn-outline-light"><i class="ti ti-printer me-1"></i>Print</a>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                    <div class="d-flex align-items-center gap-3">
+                        <span class="avatar avatar-xxl flex-shrink-0 bg-light rounded border">
+                            <img src="./assets/img/icons/icon-logo.svg" alt="img" class="w-auto h-auto">
+                        </span>
+                        <div>
+                            <h6 class="mb-2 fw-semibold">Dream’s Medical Center</h6>
+                            <p class="mb-1 text-dark fw-medium">Dr. Sandy Maria</p>
+                            <p class="fs-13 mb-0">MD Aerologist. MBBS,MS</p>
+                        </div>
+                    </div>
+                    <div class="text-lg-end">
+                        <p class="mb-1"><span class="text-dark fw-medium">Test Type : </span>CBC</p>
+                        <p class="mb-1"><span class="text-dark fw-medium">Collected On: </span>25 Jan 2024, 10:00 AM</p>
+                        <p class="mb-0"><span class="text-dark fw-medium">Reported On: </span>25 Jan 2024, 11:00 AM</p>
+                    </div>
+                </div>
+                <h6 class="mb-1 fw-semibold">Patient Details</h6>
+                <div class="mb-4 bg-light rounded p-2 d-flex align-items-center justify-content-between flex-wrap gap-2">
+                    <h6 class="fs-14 fw-medium mb-0">M. Reyan Verol</h6>
+                    <div class="d-flex align-items-center gap-3">
+                        <p class="mb-0">28Y /  Male</p>
+                        <p class="mb-0">Blood : O+ve</p>
+                        <p class="mb-0">Type : Outpatient</p>
+                    </div>
+                </div>
+                <h6 class="mb-3 fw-semibold">Complete Blood Count(CBC)</h6>
+                <div class="table-responsive table-nowrap rounded border border-bottom-0">
+                    <table class="table mb-0 rounded">
+                        <thead class="table-dark">
+                            <tr>
+                                <th class="text-white">Investigation</th>
+                                <th class="text-white">Result</th>
+                                <th class="text-white">Reference Value</th>
+                                <th class="text-white">Unit</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><h6 class="mb-0 fw-semibold">Differntial WBC Count</h6></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium text-dark">Neutrophils</td>
+                                <td>75</td>
+                                <td>50 - 62</td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium text-dark">Lymphocytes</td>
+                                <td>90</td>
+                                <td>20 - 40</td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium text-dark">Eosinophils</td>
+                                <td>60</td>
+                                <td>00 - 06</td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium text-dark">Monocytes</td>
+                                <td>60</td>
+                                <td>00 - 10</td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium text-dark">Basophils</td>
+                                <td>95</td>
+                                <td>00 - 02</td>
+                                <td>%</td>
+                            </tr>
+                            <tr>
+                                <td><h6 class="mb-0 fw-semibold">Platelet Count</h6></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="fw-medium text-dark">Platelet Count</td>
+                                <td class="text-warning">150000<span class="badge ms-2 badge-soft-warning text-warning border border-warning">Borderline</span></td>
+                                <td>150000 - 410000</td>
+                                <td>cumm</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="border-top mt-4 pt-4 d-flex justify-content-between align-items-center gap-3 flex-wrap">
+                    <div>
+                        <p class="mb-2">Scan to the pay</p>
+                        <img src="./assets/img/icons/qr-code.svg" alt="qr-code">
+                    </div>
+                    <div class="text-center">
+                        <img src="./assets/img/icons/signature.svg" alt="signature" class="signature mb-2">
+                        <h6 class="fw-semibold fs-14 mb-1">Ted M. Davis</h6>
+                        <p class="mb-0">Manager</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End view Modal -->
