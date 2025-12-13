@@ -1,0 +1,362 @@
+<!-- Start Content -->
+<div class="content">
+
+    <!-- Page Header -->
+    <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+        <div class="breadcrumb-arrow">
+            <h4 class="mb-1">Patient Details</h4>
+            <div class="text-end">
+                <ol class="breadcrumb m-0 py-0">
+                    <li class="breadcrumb-item"><a [routerLink]="AllRoutes.index">Home</a></li>
+                    <li class="breadcrumb-item active">Patient Details</li>
+                </ol>
+            </div>
+        </div>
+        <a [routerLink]="AllRoutes.patients" class="fw-medium d-flex align-items-center"><i class="ti ti-arrow-left me-1"></i>Back to
+            Patients</a>
+    </div>
+    <!-- End Page Header -->
+
+    <!-- tabs start -->
+    <ul class="nav nav-tabs nav-item-primary border-bottom pb-4 mb-4 d-flex align-items-center gap-2">
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientDetails" class="nav-link border rounded fw-semibold">
+                Patient Profile
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientDetailsAppointment" class="nav-link border rounded fw-semibold">
+                Appointments
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientDetailsVitalSign" class="nav-link border rounded fw-semibold active">
+                Vital Signs
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsVisitHistory" class="nav-link border rounded fw-semibold">
+                Visit History
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsLabResults" class="nav-link border rounded fw-semibold">
+                Lab Results
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientdetailsPrescription" class="nav-link border rounded fw-semibold">
+                Prescription
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsMedicalHistory" class="nav-link border rounded fw-semibold">
+                Medical History
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsDocuments" class="nav-link border rounded fw-semibold">
+                Documents
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsInsurance" class="nav-link border rounded fw-semibold">
+                Insurance
+            </a>
+        </li>
+    </ul>
+    <!-- tabs end -->
+
+    <!-- card start -->
+    <div class="card mb-0">
+
+        <div class="card-header d-flex align-items-center flex-wrap gap-2 justify-content-between">
+            <h5 class="d-inline-flex align-items-center mb-0">Vital Signs<span class="badge bg-danger ms-2">658</span>
+            </h5>
+            <div class="d-flex align-items-center flex-wrap">
+                <div class="dropdown">
+                    <a href="javascript:void(0);"
+                        class="dropdown-toggle btn btn-md btn-outline-light d-inline-flex align-items-center"
+                        data-bs-toggle="dropdown">
+                        <i class="ti ti-sort-descending-2 me-1"></i><span class="me-1">Sort By : </span> Newest
+                    </a>
+                    <ul class="dropdown-menu  dropdown-menu-end p-2">
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item rounded-1">Newest</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <!-- table start -->
+            <div class="table-responsive table-nowrap">
+                <table class="table mb-0 border">
+                    <thead class="table-light">
+                        <tr>
+                            <th class="no-sort">Doctor Name</th>
+                            <th class="no-sort">Department</th>
+                            <th>Date</th>
+                            <th class="no-sort"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-01.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Andrew
+                                                Clark</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Anaesthesiology</td>
+                            <td>17 Jun 2025</td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-03.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Katherine
+                                                Brooks</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Dental Surgery</td>
+                            <td>10 Jun 2025</td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-04.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Benjamin
+                                                Harris</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Dermatology</td>
+                            <td>22 May 2025</td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-05.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Laura
+                                                Mitchell</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>ENT Surgery</td>
+                            <td>15 May 2025</td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-06.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Christopher
+                                                Lewis</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>General Medicine</td>
+                            <td>30 Apr 2025</td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- table end -->
+        </div>
+
+    </div>
+    <!-- card end -->
+
+</div>
+<!-- End Content -->
+
+<!-- Start view Modal -->
+<div id="view_modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h5 class="modal-title text-truncate">Vital Details</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="ti ti-circle-x-filled"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="row row-gap-4">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i
+                                    class="ti ti-droplet fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1 text-truncate">Blood Pressure</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate"><i
+                                        class="ti ti-point-filled me-1 text-success fs-18"></i>100/67 mmHg</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i
+                                    class="ti ti-heart-rate-monitor fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1 text-truncate">Heart Rate</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate"><i
+                                        class="ti ti-point-filled me-1 text-danger fs-18"></i>89 Bpm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i
+                                    class="ti ti-hexagons fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1">SPO2</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate"><i
+                                        class="ti ti-point-filled me-1 text-success fs-18"></i>98 %</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i
+                                    class="ti ti-temperature fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1 text-truncate">Temperature</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate"><i
+                                        class="ti ti-point-filled me-1 text-success fs-18"></i>101 C</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i
+                                    class="ti ti-ease-in fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1 text-truncate">Respiratory Rate</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate"><i
+                                        class="ti ti-point-filled me-1 text-danger fs-18"></i>24 rpm</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center">
+                            <span class="avatar rounded bg-light text-dark flex-shrink-0 me-2"><i
+                                    class="ti ti-circuit-switch-open fs-16"></i></span>
+                            <div>
+                                <h6 class="fs-14 fw-semibold mb-1 text-truncate">Weight</h6>
+                                <p class="mb-0 fs-13 d-inline-flex align-items-center text-truncate"><i
+                                        class="ti ti-point-filled me-1 text-success fs-18"></i>100 kg</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End view Modal -->

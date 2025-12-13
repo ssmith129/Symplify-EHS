@@ -1,0 +1,563 @@
+<!-- Start Content -->
+<div class="content">
+
+    <!-- Page Header -->
+    <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+        <div class="breadcrumb-arrow">
+            <h4 class="mb-1">Pharmacy</h4>
+            <div class="text-end">
+                <ol class="breadcrumb m-0 py-0">
+                    <li class="breadcrumb-item"><a [routerLink]="AllRoutes.index">Home</a></li>                            
+                    <li class="breadcrumb-item active">Pharmacy</li>
+                </ol>
+            </div>
+        </div>
+        <div class="gap-2 d-flex align-items-center flex-wrap">
+            <a href="javascript:void(0);" class="btn btn-icon btn-white" data-bs-toggle="tooltip" matTooltipPosition="above" aria-label="Refresh" matTooltip="Refresh"><i class="ti ti-refresh"></i></a>
+            <a href="javascript:void(0);" class="btn btn-icon btn-white" data-bs-toggle="tooltip" matTooltipPosition="above" aria-label="Print" matTooltip="Print"><i class="ti ti-printer"></i></a>
+            <a href="javascript:void(0);" class="btn btn-icon btn-white" data-bs-toggle="tooltip" matTooltipPosition="above" aria-label="Download" matTooltip="Download"><i class="ti ti-cloud-download"></i></a>
+            <a href="javascript:void(0);" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#add_modal"><i class="ti ti-square-rounded-plus me-1"></i>New Product</a>
+        </div>
+    </div>
+    <!-- End Page Header -->
+    
+    <!-- card start -->
+    <div class="card mb-0">
+        <div class="card-header d-flex align-items-center flex-wrap gap-2 justify-content-between">
+            <h6 class="d-inline-flex align-items-center mb-0">Total Products<span class="badge bg-danger ms-2">658</span></h6>
+            <div class="d-flex align-items-center flex-wrap gap-2">
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle btn btn-md btn-outline-light d-inline-flex align-items-center" data-bs-toggle="dropdown">
+                        <i class="ti ti-sort-descending-2 me-1"></i><span class="me-1">Sort By : </span> Newest
+                    </a>
+                    <ul class="dropdown-menu  dropdown-menu-end p-2">
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item rounded-1">Newest</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+           <!-- table start -->
+            <div class="table-responsive table-nowrap">
+                <table class="table mb-0 border">
+                    <thead class="table-light">
+                        <tr>
+                            <th>ID</th>
+                            <th>Product Name</th>
+                            <th class="no-sort">Price</th>
+                            <th class="no-sort">Offer Price</th>
+                            <th>Purchase Date</th>
+                            <th>Expiry Date</th>
+                            <th>Stock</th>
+                            <th class="no-sort">Description</th>
+                            <th>Unit (ml/mg)</th>
+                            <th class="no-sort"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0025</a></td>
+                            <td>Acetaminophen</td>
+                            <td>$500</td>
+                            <td>$50</td>
+                            <td>17 Jun 2025</td>  
+                            <td>22 Jun 2025</td>   
+                            <td>280</td> 
+                            <td><p class="mb-0 text-truncate">Prevents heart attacks and strokes</p></td>                                 
+                            <td>20mg</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0024</a></td>
+                            <td>Cymbalta</td>
+                            <td>$500</td>
+                            <td>$50</td>
+                            <td>10 Jun 2025</td>  
+                            <td>15 Jun 2025</td>   
+                            <td>468</td> 
+                            <td><p class="mb-0 text-truncate">Treats hypertension, angina, and heart failure</p></td>                                 
+                            <td>17mg</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0023</a></td>
+                            <td>Dupixent</td>
+                            <td>$300</td>
+                            <td>$30</td>
+                            <td>22 May 2025</td>  
+                            <td>27 May 2025</td>   
+                            <td>261</td> 
+                            <td><p class="mb-0 text-truncate">Used for muscle spasms and spasticity</p></td>                                 
+                            <td>40mg</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0022</a></td>
+                            <td>Entresto</td>
+                            <td>$200</td>
+                            <td>$20</td>
+                            <td>15 May 2025</td>  
+                            <td>20 May 2025</td>   
+                            <td>550</td> 
+                            <td><p class="mb-0 text-truncate">Treats depression and panic disorder</p></td>                                 
+                            <td>28mg</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0021</a></td>
+                            <td>Rybelsus</td>
+                            <td>$100</td>
+                            <td>$10</td>
+                            <td>30 Apr 2025</td>  
+                            <td>5 May 2025</td>   
+                            <td>303</td> 
+                            <td><p class="mb-0 text-truncate">Treats angina by dilating blood vessels.</p></td>                                 
+                            <td>30ml</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0020</a></td>
+                            <td>Pantoprazole</td>
+                            <td>$600</td>
+                            <td>$60</td>
+                            <td>25 Apr 2025</td>  
+                            <td>30 Apr 2025</td>   
+                            <td>468</td> 
+                            <td><p class="mb-0 text-truncate">Used for schizophrenia and bipolar disorder</p></td>                                 
+                            <td>10mg</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0019</a></td>
+                            <td>Prednisone</td>
+                            <td>$700</td>
+                            <td>$70</td>
+                            <td>13 Mar 2025</td>  
+                            <td>18 Mar 2025</td>   
+                            <td>100</td> 
+                            <td><p class="mb-0">Reduces stomach acid</p></td>                                 
+                            <td>20ml</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0018</a></td>
+                            <td>Entyvio</td>
+                            <td>$800</td>
+                            <td>$80</td>
+                            <td>16 Feb 2025</td>  
+                            <td>21 Feb 2025</td>   
+                            <td>250</td> 
+                            <td><p class="mb-0 text-truncate">For chest pain associated with heart conditions</p></td>                                 
+                            <td>25mg</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0017</a></td>
+                            <td>Farxiga</td>
+                            <td>$900</td>
+                            <td>$90</td>
+                            <td>20 Jan 2025</td>  
+                            <td>25 Jan 2025</td>   
+                            <td>180</td> 
+                            <td><p class="mb-0 text-truncate">Treats bacterial infections</p></td>                                 
+                            <td>35mg</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal" data-bs-target="#view_modal">#PR0016</a></td>
+                            <td>Apexitecan</td>
+                            <td>$500</td>
+                            <td>$50</td>
+                            <td>15 Jan 2025</td>  
+                            <td>20 Jan 2025</td>   
+                            <td>220</td> 
+                            <td><p class="mb-0 text-truncate">Reduces stomach acid, treats acid reflux</p></td>                                 
+                            <td>45mg</td> 
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#view_modal"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>  
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#edit_modal"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                       
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- table end -->
+        </div>
+
+    </div>
+    <!-- card start -->
+
+</div>
+<!-- End Content -->
+
+<!-- Start view Modal -->
+<div id="add_modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h5 class="modal-title">Add New Product</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>      
+            </div>
+            <form>
+                <div class="modal-body">                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">ID</label>
+                                <input type="text" class="form-control" value="#PR00011" disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Price</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Offer Price</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Purchase Date</label>
+                                <div class="input-group w-auto input-group-flat ngxdate">
+                                    <input type="text" class="form-control" [bsConfig]="{dateInputFormat: 'DD MMM,YYYY'}" bsDatepicker container=".ngxdate" placeholder="dd/mm/yyyy">
+                                    <span class="input-group-text">
+                                        <i class="ti ti-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Expire Date</label>
+                                <div class="input-group w-auto input-group-flat ngxdate1">
+                                    <input type="text" class="form-control" [bsConfig]="{dateInputFormat: 'DD MMM,YYYY'}" bsDatepicker container=".ngxdate1" placeholder="dd/mm/yyyy">
+                                    <span class="input-group-text">
+                                        <i class="ti ti-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Unit</label>
+                                <mat-select class="select custom-mat-select" placeholder="Select">
+                                    <mat-option value="1">Select</mat-option>
+                                    <mat-option value="1">mg</mat-option>
+                                    <mat-option value="1">ml</mat-option>
+                                </mat-select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Stock</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div>
+                                <label class="form-label">Description</label>
+                                <textarea class="form-control" rows="4"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex align-items-center gap-1">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Add Product</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End view Modal -->
+
+<!-- Start view Modal -->
+<div id="edit_modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h5 class="modal-title">Edit Product</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>      
+            </div>
+            <form>
+                <div class="modal-body">                    
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">ID</label>
+                                <input type="text" class="form-control" value="#PR00011" disabled>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Name</label>
+                                <input type="text" class="form-control" value="Acetaminophen">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Price</label>
+                                <input type="text" class="form-control" value="$150">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Offer Price</label>
+                                <input type="text" class="form-control" value="$130">
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Purchase Date</label>
+                                <div class="input-group w-auto input-group-flat ngxdate2">
+                                    <input type="text" class="form-control" [bsConfig]="{dateInputFormat: 'DD MMM,YYYY'}" bsDatepicker container=".ngxdate2" placeholder="dd/mm/yyyy">
+                                    <span class="input-group-text">
+                                        <i class="ti ti-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Expire Date</label>
+                                <div class="input-group w-auto input-group-flat ngxdate3">
+                                    <input type="text" class="form-control" [bsConfig]="{dateInputFormat: 'DD MMM,YYYY'}" bsDatepicker container=".ngxdate3" placeholder="dd/mm/yyyy">
+                                    <span class="input-group-text">
+                                        <i class="ti ti-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Unit</label>
+                                <mat-select class="select custom-mat-select" placeholder="mg">
+                                    <mat-option value="1">Select</mat-option>
+                                    <mat-option value="1" selected>mg</mat-option>
+                                    <mat-option value="1">ml</mat-option>
+                                </mat-select>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3">
+                                <label class="form-label">Stock</label>
+                                <input type="text" class="form-control" value="400">
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="mb-3">
+                                <label class="form-label">Description</label>
+                                <textarea class="form-control" rows="4">Prevents heart attacks and strokes</textarea>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="d-flex align-items-center justify-content-between">
+                                <label class="form-label mb-0">Status</label>
+                                <label class="d-flex align-items-center justify-content-xl-end form-switch">
+                                    <input class="form-check-input m-0 me-2" type="checkbox" checked="">
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex align-items-center gap-1">
+                    <button type="button" class="btn btn-outline-light" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End view Modal -->
+
+<!-- Start view Modal -->
+<div id="view_modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h5 class="modal-title">Product Detail</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i class="ti ti-circle-x-filled"></i></button>      
+            </div>
+            <div class="modal-body">
+                <h6 class="mb-2">Basic Information</h6>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="mb-2">
+                            <h6 class="fs-14 fw-semibold mb-1">Name</h6>
+                            <p class="mb-0">Acetaminophen 20mg</p>
+                        </div>
+                        <div class="mb-2">
+                            <h6 class="fs-14 fw-semibold mb-1">Price</h6>
+                            <p class="mb-0">$400 (20% Offer)</p>
+                        </div>
+                        <div class="mb-2">
+                            <h6 class="fs-14 fw-semibold mb-1">Purchased Date</h6>
+                            <p class="mb-0">17 Jun 2025</p>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="mb-2">
+                            <h6 class="fs-14 fw-semibold mb-1">Expiry Date</h6>
+                            <p class="mb-0">22 Jun 2025</p>
+                        </div>
+                        <div class="mb-2">
+                            <h6 class="fs-14 fw-semibold mb-1">Stock</h6>
+                            <p class="mb-0">200</p>
+                        </div>
+                        <div class="mb-2">
+                            <h6 class="fs-14 fw-semibold mb-1">Status</h6>
+                            <span class="badge badge-soft-success">In Stock</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-2">
+                    <h6 class="mb-2">Description</h6>
+                    <p class="mb-0">Provide detailed instructions on how to use prescribed medications. Include dosage, frequency, and any specific application guidelines.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End view Modal -->

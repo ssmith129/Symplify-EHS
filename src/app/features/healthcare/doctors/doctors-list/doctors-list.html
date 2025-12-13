@@ -1,0 +1,303 @@
+<!-- Start Content -->
+<div class="content">
+
+    <!-- Page Header -->
+    <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+        <div class="breadcrumb-arrow">
+            <h4 class="mb-1">Doctors</h4>
+            <div class="text-end">
+                <ol class="breadcrumb m-0 py-0">
+                    <li class="breadcrumb-item"><a [routerLink]="AllRoutes.index">Home</a></li>                            
+                    <li class="breadcrumb-item active">Doctors</li>
+                </ol>
+            </div>
+        </div>
+        <div class="gap-2 d-flex align-items-center flex-wrap">
+            <a [routerLink]="AllRoutes.doctors" class="btn btn-icon btn-white" data-bs-toggle="tooltip" matTooltipPosition="above" aria-label="Grid" matTooltip="Grid View"><i class="ti ti-layout-grid"></i></a>
+            <a [routerLink]="AllRoutes.allDoctorsList" class="btn btn-icon btn-white active" data-bs-toggle="tooltip" matTooltipPosition="above" aria-label="List" matTooltip="List View"><i class="ti ti-layout-list"></i></a>
+            <a href="javascript:void(0);" class="btn btn-icon btn-white" data-bs-toggle="tooltip" matTooltipPosition="above" aria-label="Refresh" matTooltip="Refresh"><i class="ti ti-refresh"></i></a>
+            <a href="javascript:void(0);" class="btn btn-icon btn-white" data-bs-toggle="tooltip" matTooltipPosition="above" aria-label="Print" matTooltip="Print"><i class="ti ti-printer"></i></a>
+            <a href="javascript:void(0);" class="btn btn-icon btn-white" data-bs-toggle="tooltip" matTooltipPosition="above" aria-label="Download" matTooltip="Download"><i class="ti ti-cloud-download"></i></a>
+            <a [routerLink]="AllRoutes.addDoctor" class="btn btn-primary"><i class="ti ti-square-rounded-plus me-1"></i>New Doctor</a>
+        </div>
+    </div>
+    <!-- End Page Header -->
+
+    <!-- card start -->
+    <div class="card mb-0">
+        <div class="card-header d-flex align-items-center flex-wrap gap-2 justify-content-between">
+            <h5 class="d-inline-flex align-items-center mb-0">Total Doctors<span class="badge bg-danger ms-2">600</span></h5>
+            <div class="d-flex align-items-center">
+
+                <!-- sort by -->
+                <div class="dropdown">
+                    <a href="javascript:void(0);" class="dropdown-toggle btn btn-md btn-outline-light d-inline-flex align-items-center" data-bs-toggle="dropdown">
+                    <i class="ti ti-sort-descending-2 me-1"></i><span class="me-1">Sort By : </span>  Newest
+                    </a>
+                    <ul class="dropdown-menu  dropdown-menu-end p-2">
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item rounded-1">Newest</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="card-body">
+           <div class="table-responsive table-nowrap">
+                <table class="table mb-0 border">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Doctor ID</th>
+                            <th>Doctor Name</th>
+                            <th>Department</th>
+                            <th>Qualification</th>
+                            <th>Experience</th>
+                            <th>Total Appointments</th>
+                            <th>Status</th>
+                            <th class="no-sort"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#DR0025</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-01.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Andrew Clark</a></h6></div></div></td>
+                            <td>Anaesthesiology</td>
+                            <td>MBBS</td>
+                            <td>4+ years</td>
+                            <td>200</td>
+                            <td><span class="badge badge-soft-success">Active</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#DR0024</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-02.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Katherine Brooks</a></h6></div></div></td>
+                            <td>Dental Surgery</td>
+                            <td>MDS</td>
+                            <td>3+ years</td>
+                            <td>350</td>
+                            <td><span class="badge badge-soft-danger">Inactive</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#DR0023</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-03.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Benjamin Harris</a></h6></div></div></td>
+                            <td>Dermatology</td>
+                            <td>MS</td>
+                            <td>6+ years</td>
+                            <td>400</td>
+                            <td><span class="badge badge-soft-success">Active</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#DR0022</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-04.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Laura Mitchell</a></h6></div></div></td>
+                            <td>ENT Surgery</td>
+                            <td>MBBS</td>
+                            <td>2+ years</td>
+                            <td>150</td>
+                            <td><span class="badge badge-soft-success">Active</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#DR0021</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-05.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Christopher Lewis</a></h6></div></div></td>
+                            <td>General Medicine</td>
+                            <td>MS</td>
+                            <td>3+ years</td>
+                            <td>380</td>
+                            <td><span class="badge badge-soft-success">Active</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#DR0020</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-06.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Natalie Foster</a></h6></div></div></td>
+                            <td>Ophthalmology</td>
+                            <td>MBBS</td>
+                            <td>2+ years</td>
+                            <td>450</td>
+                            <td><span class="badge badge-soft-success">Active</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#DR0019</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-07.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Jonathan Adams</a></h6></div></div></td>
+                            <td>Orthopaedics</td>
+                            <td>MS</td>
+                            <td>3+ years</td>
+                            <td>330</td>
+                            <td><span class="badge badge-soft-danger">Inactive</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#DR0018</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-08.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Rebecca Scott</a></h6></div></div></td>
+                            <td>Pediatrics </td>
+                            <td>MBBS</td>
+                            <td>4+ years</td>
+                            <td>270</td>
+                            <td><span class="badge badge-soft-success">Active</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#DR0017</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-09.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Samuel Turner</a></h6></div></div></td>
+                            <td>Radiology</td>
+                            <td>MS</td>
+                            <td>4+ years</td>
+                            <td>510</td>
+                            <td><span class="badge badge-soft-danger">Inactive</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>#DR0016</td>
+                            <td><div class="d-flex align-items-center"><a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2"><img src="assets/img/doctors/doctor-10.jpg" alt="doctor" class="rounded"></a><div><h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Victoria Evans</a></h6></div></div></td>
+                            <td>Cardiology</td>
+                            <td>MBBS</td>
+                            <td>3+ years</td>
+                            <td>480</td>
+                            <td><span class="badge badge-soft-success">Active</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light" data-bs-toggle="dropdown" aria-label="more options"><i class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a [routerLink]="AllRoutes.doctorDetails" class="dropdown-item d-flex align-items-center"><i class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a [routerLink]="AllRoutes.editDoctor" class="dropdown-item d-flex align-items-center"><i class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>                                        
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center" data-bs-toggle="modal" data-bs-target="#delete_modal"><i class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <!-- card start -->
+
+
+</div>
+<!-- End Content -->

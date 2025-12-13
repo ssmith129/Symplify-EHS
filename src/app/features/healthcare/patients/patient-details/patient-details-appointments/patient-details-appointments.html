@@ -1,0 +1,752 @@
+<!-- Start Content -->
+<div class="content">
+
+    <!-- Page Header -->
+    <div class="d-flex align-items-center justify-content-between gap-2 mb-4 flex-wrap">
+        <div class="breadcrumb-arrow">
+            <h4 class="mb-1">Patient Details</h4>
+            <div class="text-end">
+                <ol class="breadcrumb m-0 py-0">
+                    <li class="breadcrumb-item"><a [routerLink]="AllRoutes.index">Home</a></li>
+                    <li class="breadcrumb-item active">Patient Details</li>
+                </ol>
+            </div>
+        </div>
+        <a [routerLink]="AllRoutes.patients" class="fw-medium d-flex align-items-center"><i class="ti ti-arrow-left me-1"></i>Back to
+            Patients</a>
+    </div>
+    <!-- End Page Header -->
+
+    <!-- tabs start -->
+    <ul class="nav nav-tabs nav-item-primary border-bottom pb-4 mb-4 d-flex align-items-center gap-2">
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientDetails" class="nav-link border rounded fw-semibold">
+                Profile
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientDetailsAppointment" class="nav-link border rounded fw-semibold active">
+                Appointments
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientDetailsVitalSign" class="nav-link border rounded fw-semibold">
+                Vitals
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsVisitHistory" class="nav-link border rounded fw-semibold">
+                Visit History
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsLabResults" class="nav-link border rounded fw-semibold">
+                Lab Results
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientdetailsPrescription" class="nav-link border rounded fw-semibold">
+                Prescription
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsMedicalHistory" class="nav-link border rounded fw-semibold">
+                Medical History
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsDocuments" class="nav-link border rounded fw-semibold">
+                Documents
+            </a>
+        </li>
+        <li class="nav-item">
+            <a [routerLink]="AllRoutes.patientetailsInsurance" class="nav-link border rounded fw-semibold">
+                Insurance
+            </a>
+        </li>
+    </ul>
+    <!-- tabs end -->
+
+    <!-- card start -->
+    <div class="card mb-0">
+
+        <div class="card-header d-flex align-items-center flex-wrap gap-2 justify-content-between">
+            <h5 class="d-inline-flex align-items-center mb-0">Total Appointments<span
+                    class="badge bg-danger ms-2">658</span></h5>
+            <div class="d-flex align-items-center flex-wrap gap-2">
+                <div class="dropdown">
+                    <a href="javascript:void(0);"
+                        class="dropdown-toggle btn btn-md btn-outline-light d-inline-flex align-items-center"
+                        data-bs-toggle="dropdown">
+                        <i class="ti ti-sort-descending-2 me-1"></i><span class="me-1">Sort By : </span> Newest
+                    </a>
+                    <ul class="dropdown-menu  dropdown-menu-end p-2">
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item rounded-1">Newest</a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0);" class="dropdown-item rounded-1">Oldest</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-body">
+            <!-- table start -->
+            <div class="table-responsive table-nowrap">
+                <table class="table mb-0 border">
+                    <thead class="table-light">
+                        <tr>
+                            <th>Patient ID</th>
+                            <th>Doctor Name</th>
+                            <th class="no-sort">Department</th>
+                            <th class="no-sort">Appointment Date</th>
+                            <th class="no-sort">Status</th>
+                            <th class="no-sort"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0025</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-01.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Andrew
+                                                Clark</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Anaesthesiology</td>
+                            <td>17 Jun 2025, 09:00 AM to 10:00 AM</td>
+                            <td><span class="badge badge-soft-purple">Upcoming</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0024</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-03.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Katherine
+                                                Brooks</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Dental Surgery</td>
+                            <td>10 Jun 2025, 10:30 AM to 11:30 AM</td>
+                            <td><span class="badge badge-soft-purple">Upcoming</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0023</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-04.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Benjamin
+                                                Harris</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Dermatology</td>
+                            <td>22 May 2025, 01:15 PM to 02:15 PM</td>
+                            <td><span class="badge badge-soft-purple">Upcoming</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0022</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-05.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Laura
+                                                Mitchell</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>ENT Surgery</td>
+                            <td>15 May 2025, 11:30 AM to 12:30 PM</td>
+                            <td><span class="badge badge-soft-info">Inprogress</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0021</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-06.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Christopher
+                                                Lewis</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>General Medicine</td>
+                            <td>30 Apr 2025, 12:20 PM to 01:20 PM</td>
+                            <td><span class="badge badge-soft-success">Completed</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0020</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-07.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Natalie
+                                                Foster</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Ophthalmology</td>
+                            <td>25 Apr 2025, 03:15 PM to 04:15 PM</td>
+                            <td><span class="badge badge-soft-success">Completed</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0019</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-10.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Jonathan
+                                                Adams</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Orthopaedics</td>
+                            <td>13 Mar 2025, 02:40 PM to 03:40 PM</td>
+                            <td><span class="badge badge-soft-success">Completed</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0018</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-08.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Rebecca
+                                                Scott</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Pediatrics </td>
+                            <td>16 Feb 2025, 03:00 PM to 04:00 PM</td>
+                            <td><span class="badge badge-soft-success">Completed</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0017</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-12.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Samuel
+                                                Turner</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Radiology</td>
+                            <td>20 Jan 2025, 04:45 PM to 05:45 PM</td>
+                            <td><span class="badge badge-soft-success">Completed</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><a href="javascript:void(0);" data-bs-toggle="modal"
+                                    data-bs-target="#view_modal">#PT0016</a></td>
+                            <td>
+                                <div class="d-flex align-items-center">
+                                    <a [routerLink]="AllRoutes.doctorDetails" class="avatar avatar-xs me-2">
+                                        <img src="assets/img/doctors/doctor-11.jpg" alt="doctor" class="rounded">
+                                    </a>
+                                    <div>
+                                        <h6 class="fs-14 mb-0 fw-medium"><a [routerLink]="AllRoutes.doctorDetails">Dr. Victoria
+                                                Evans</a></h6>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Cardiology</td>
+                            <td>15 Jan 2025, 05:30 PM to 06:30 PM</td>
+                            <td><span class="badge badge-soft-success">Completed</span></td>
+                            <td class="text-end">
+                                <a href="javascript:void(0);" class="btn btn-icon btn-outline-light"
+                                    data-bs-toggle="dropdown" aria-label="more options"><i
+                                        class="ti ti-dots-vertical"></i></a>
+                                <ul class="dropdown-menu p-2">
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#view_modal"><i
+                                                class="ti ti-eye me-1"></i>View Details</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#edit_modal"><i
+                                                class="ti ti-edit me-1"></i>Edit</a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                            data-bs-toggle="modal" data-bs-target="#delete_modal"><i
+                                                class="ti ti-trash me-1"></i>Delete</a>
+                                    </li>
+                                </ul>
+                            </td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+            <!-- table end -->
+        </div>
+
+    </div>
+    <!-- card end -->
+
+</div>
+<!-- End Content -->
+
+
+<!-- Start edit Modal -->
+<div id="edit_modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered modal-md">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h5 class="text-dark modal-title fw-bold text-truncate">Edit Appointment</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="ti ti-circle-x-filled"></i></button>
+            </div>
+            <form>
+                <div class="modal-body pb-0">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label class="form-label">Select Patient</label>
+                                <mat-select class="select custom-mat-select" placeholder="James Carter">
+                                    <mat-option value="1">Select</mat-option>
+                                    <mat-option value="1" selected>James Carter</mat-option>
+                                    <mat-option value="1">Emily Davis</mat-option>
+                                    <mat-option value="1">Michael Johnson</mat-option>
+                                    <mat-option value="1">Olivia Miller</mat-option>
+                                    <mat-option value="1">David Smith</mat-option>
+                                    <mat-option value="1">Sophia Wilson</mat-option>
+                                    <mat-option value="1">Daniel Williams</mat-option>
+                                    <mat-option value="1">Isabella Anderson</mat-option>
+                                    <mat-option value="1">William Brown</mat-option>
+                                    <mat-option value="1">Charlotte Taylor</mat-option>
+                                </mat-select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label class="form-label">Patient Type</label>
+                                <mat-select class="select custom-mat-select" placeholder="In Patient">
+                                    <mat-option value="1">Select</mat-option>
+                                    <mat-option value="1" selected>In Patient</mat-option>
+                                    <mat-option value="1">Out Patient</mat-option>
+                                </mat-select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label class="form-label">Select Department<span
+                                        class="text-danger ms-1">*</span></label>
+                                <mat-select class="select custom-mat-select" placeholder="Anaesthesiology">
+                                    <mat-option value="1">Select</mat-option>
+                                    <mat-option value="1" selected>Anaesthesiology</mat-option>
+                                    <mat-option value="1">Dental Surgery</mat-option>
+                                    <mat-option value="1">Dermatology</mat-option>
+                                    <mat-option value="1">ENT Surgery</mat-option>
+                                    <mat-option value="1">Ophthalmology</mat-option>
+                                    <mat-option value="1">Orthopaedics</mat-option>
+                                    <mat-option value="1">Pediatrics </mat-option>
+                                    <mat-option value="1">Radiology</mat-option>
+                                    <mat-option value="1">Cardiology</mat-option>
+                                </mat-select>
+                            </div>
+                        </div>
+                        <div class="col-lg-6">
+                            <div class="mb-3">
+                                <label class="form-label">Select Doctor<span class="text-danger ms-1">*</span></label>
+                                <mat-select class="select custom-mat-select" placeholder="Dr. Andrew Clark">
+                                    <mat-option value="1">Select</mat-option>
+                                    <mat-option value="1" selected>Dr. Andrew Clark</mat-option>
+                                    <mat-option value="1">Dr. Katherine Brooks</mat-option>
+                                    <mat-option value="1">Dr. Benjamin Harris</mat-option>
+                                    <mat-option value="1">Dr. Laura Mitchell</mat-option>
+                                    <mat-option value="1">Dr. Christopher Lewis</mat-option>
+                                    <mat-option value="1">Dr. Natalie Foster</mat-option>
+                                    <mat-option value="1">Dr. Jonathan Adams</mat-option>
+                                    <mat-option value="1">Dr. Rebecca Scott</mat-option>
+                                    <mat-option value="1">Dr. Samuel Turner</mat-option>
+                                    <mat-option value="1">Dr. Victoria Evans</mat-option>
+                                </mat-select>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label class="form-label">Preferred Mode of Consultation<span
+                                        class="text-danger ms-1">*</span></label>
+                                <mat-select class="select custom-mat-select" placeholder="In-Person">
+                                    <mat-option value="1">Select</mat-option>
+                                    <mat-option value="1" selected>In-Person</mat-option>
+                                    <mat-option value="1">Video</mat-option>
+                                    <mat-option value="1">Phone</mat-option>
+                                </mat-select>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label class="form-label">Date</label>
+                                <div class="input-group w-auto input-group-flat ngxdate">
+                                    <input type="text" class="form-control" [bsConfig]="{dateInputFormat: 'DD MMM,YYYY'}" bsDatepicker container=".ngxdate" placeholder="dd/mm/yyyy">
+                                    <span class="input-group-text">
+                                        <i class="ti ti-calendar"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label class="form-label">Start Time</label>
+                                <div class="input-icon-end position-relative">
+                                    <p-datepicker
+                                        inputId="calendar-timeonly"
+                                        placeholder="--:--"
+                                        class="form-control timepicker custom-time w-100"
+                                        [(ngModel)]="addtime[0]"
+                                        [timeOnly]="true"
+                                        [ngModelOptions]="{ standalone: true }"
+                                        [hourFormat]="'12'"
+                                        name="addtime"
+                                        value="11:00 AM"
+                                    />
+                                    <span class="input-icon-addon">
+                                        <i class="ti ti-clock-hour-10 text-dark"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4">
+                            <div class="mb-3">
+                                <label class="form-label">End Time</label>
+                                <div class="input-icon-end position-relative">
+                                    <p-datepicker
+                                        inputId="calendar-timeonly"
+                                        placeholder="--:--"
+                                        class="form-control timepicker custom-time w-100"
+                                        [(ngModel)]="addtime[1]"
+                                        [timeOnly]="true"
+                                        [ngModelOptions]="{ standalone: true }"
+                                        [hourFormat]="'12'"
+                                        name="addtime"
+                                        value="11:00 AM"
+                                    />
+                                    <span class="input-icon-addon">
+                                        <i class="ti ti-clock-hour-10 text-dark"></i>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label class="form-label">Reason</label>
+                                <input class="form-control h-100" type="text">
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label class="form-label">Quick Notes</label>
+                                <textarea class="form-control"
+                                    rows="4">Provide detailed instructions on how to use prescribed medications. Include dosage, frequency, and any specific application guidelines.</textarea>
+                            </div>
+                        </div>
+                        <div class="col-lg-12">
+                            <div class="mb-3">
+                                <label class="form-label">Mode of Payment</label>
+                                <mat-select class="select custom-mat-select" placeholder="Card">
+                                    <mat-option value="1">Select</mat-option>
+                                    <mat-option value="1">Cash</mat-option>
+                                    <mat-option value="1" selected>Card</mat-option>
+                                </mat-select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer d-flex align-items-center gap-1">
+                    <button type="button" class="btn btn-white" data-bs-dismiss="modal">Cancel</button>
+                    <button type="submit" class="btn btn-primary">Save Changes</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- End edit Modal -->
+
+<!-- Start view Modal -->
+<div id="view_modal" class="modal fade">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header justify-content-between">
+                <h5 class="modal-title text-truncate">Appointment Details</h5>
+                <button type="button" class="btn-close btn-close-modal" data-bs-dismiss="modal" aria-label="Close"><i
+                        class="ti ti-circle-x-filled"></i></button>
+            </div>
+            <div class="modal-body">
+                <div class="d-flex align-items-center justify-content-between mb-4">
+                    <div class="d-flex align-items-center">
+                        <a href="javascript:void(0);" class="avatar flex-shrink-0">
+                            <img src="assets/img/avatars/avatar-31.jpg" class="rounded" alt="patient">
+                        </a>
+                        <div class="ms-2">
+                            <div>
+                                <h6 class="fw-semibold fs-14 text-truncate mb-1"><a
+                                        href="javascript:void(0);">Gifford</a></h6>
+                                <p class="fs-13 mb-0">Patient</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="badge badge-soft-purple">Upcoming</span>
+                    </div>
+                </div>
+                <div class="row mb-3 row-gap-3">
+                    <div class="col-sm-12">
+                        <h6 class="mb-1">Date & Time</h6>
+                        <p class="text-dark mb-1">$500 / 1 Hr</p>
+                        <p class="fs-13 mb-0">24 Jan 2024, 09:00 AM to 10:00 PM</p>
+                    </div>
+                    <div class="col-sm-12">
+                        <h6 class="mb-1">Consultation With</h6>
+                        <p class="text-dark mb-1">Dr. Laird</p>
+                        <p class="fs-13 mb-0">Dermatologist</p>
+                    </div>
+                </div>
+                <h6 class="mb-1">Reason</h6>
+                <p class="mb-3">Fever, Stomach pain, Drowsiness</p>
+                <h6 class="mb-1">Notes</h6>
+                <p class="mb-0">Provide detailed instructions on how to use prescribed medications. Include dosage,
+                    frequency, and any specific application guidelines.</p>
+            </div>
+            <div class="modal-footer d-flex align-items-center gap-1">
+                <button type="button" class="btn btn-white" data-bs-dismiss="modal">Cancel</button>
+                <a [routerLink]="AllRoutes.appointmentConsultation" class="btn btn-primary">Start Consultation</a>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End view Modal -->

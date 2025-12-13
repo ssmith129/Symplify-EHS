@@ -1,0 +1,76 @@
+  <div class="row justify-content-center align-items-center overflow-auto flex-wrap vh-100">
+                            <div class="col-md-8 mx-auto">
+                                <form (ngSubmit)="pageRedirect()" class="d-flex justify-content-center align-items-center">
+                                    <div class="d-flex flex-column justify-content-lg-center flex-fill">
+                                        <div class="card border-1 p-lg-3 shadow-md rounded-3 m-0">
+                                            <div class="card-body">
+                                                <div class="mb-4">
+                                                    <a [routerLink]="AllRoutes.index">
+                                                        <img src="assets/img/logo-dark.svg" class="img-fluid logo m-atuo" alt="Logo">
+                                                    </a>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <h5 class="mb-1 fw-bold">Hi, Welcome Back</h5>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Email<span class="text-danger ms-1">*</span></label>
+                                                    <div class="input-group input-group-flat">
+                                                        <input type="text" value="" class="form-control border-end-0">
+                                                        <span class="input-group-text bg-white">
+                                                            <i class="ti ti-mail fs-14 text-dark"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <label class="form-label">Password<span class="text-danger ms-1">*</span></label>
+                                                    <div class="input-group input-group-flat pass-group">
+                                                        <input type="password" [type]="password[0] ? 'text' : 'password'" class="form-control pass-input">
+                                                        <span class="input-group-text toggle-password" (click)="togglePassword(0)">
+                                                            <i class="ti" [ngClass]="password[0]?'ti-eye':'ti-eye-off'"></i>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                                <div class="d-flex align-items-center justify-content-between mb-3">
+                                                    <div class="d-flex align-items-center">
+                                                        <div class="form-check form-check-md mb-0">
+                                                            <input class="form-check-input" id="remember_me" type="checkbox">
+                                                            <label for="remember_me" class="form-check-label mt-0 text-body">Remember Me</label>
+                                                        </div>
+                                                    </div>
+                                                    <div class="text-end">
+                                                        <a [routerLink]="AllRoutes.forgotPassword" class="text-body">Forgot Password?</a>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2">
+                                                    <button type="submit" class="btn bg-primary text-white w-100">Sign In</button>
+                                                </div>
+                                                <div class="login-or position-relative my-1 py-2 text-center fw-medium">
+                                                    <span class="position-relative bg-white px-2 z-2">Or</span>
+                                                </div>
+                                                <div class="mb-3">
+                                                    <div class="d-flex align-items-center justify-content-center flex-wrap">
+                                                        <div class="text-center me-2 flex-fill">
+                                                            <a href="javascript:void(0);" class="br-10 p-1 btn btn-light d-flex align-items-center justify-content-center">
+                                                                <img class="img-fluid m-1" src="assets/img/icons/google.svg" alt="Google">
+                                                                Google
+                                                            </a>
+                                                        </div>
+                                                        <div class="text-center flex-fill">
+                                                            <a href="javascript:void(0);" class="br-10 p-1 btn btn-light d-flex align-items-center justify-content-center">
+                                                                <img class="img-fluid m-1" src="assets/img/icons/facebook.svg" alt="Facebook">
+                                                                Facebook
+                                                            </a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="text-center">
+                                                    <h6 class="fw-normal fs-14 text-body mb-0">Don’t have an account?
+                                                        <a [routerLink]="AllRoutes.signUp" class="ms-1 text-primary">Sign Up</a>
+                                                    </h6>
+                                                </div>
+                                            </div><!-- end card body -->
+                                        </div><!-- end card -->
+                                    </div>
+                                </form>
+                            </div> <!-- end row-->
+                        </div>
