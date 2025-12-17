@@ -1,0 +1,14 @@
+import { Metadata } from "next";
+import IconPe7Client from "./IconPe7Client";
+
+export const metadata: Metadata = {
+  title: "Pe7 | Dreams EMR - Responsive Bootstrap 5 Medical Admin Template",
+};
+
+export default function Pe7Page(){
+    return(
+        <>
+            <IconPe7Client />
+        </>
+    )
+}
